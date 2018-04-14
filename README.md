@@ -1,26 +1,8 @@
-# Netty Project
+# 源码调试
+clone了最新的代码，将代码导入IDEA中，运行`EchoServer.java`的时候，会发现单元测试有编译错误。
 
-Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers & clients.
+搜索了半天，还是不行。
 
-## Links
+最后切换到`4.0.27-Final`的tag分支上才可以。
 
-* [Web Site](http://netty.io/)
-* [Downloads](http://netty.io/downloads.html)
-* [Documentation](http://netty.io/wiki/)
-* [@netty_project](https://twitter.com/netty_project)
-
-## How to build
-
-For the detailed information about building and developing Netty, please visit [the developer guide](http://netty.io/wiki/developer-guide.html).  This page only gives very basic information.
-
-You require the following to build Netty:
-
-* Latest stable [Oracle JDK 7](http://www.oracle.com/technetwork/java/)
-* Latest stable [Apache Maven](http://maven.apache.org/)
-* If you are on Linux, you need [additional development packages](http://netty.io/wiki/native-transports.html) installed on your system, because you'll build the native transport.
-
-Note that this is build-time requirement.  JDK 5 (for 3.x) or 6 (for 4.0+) is enough to run your Netty-based application.
-
-## Branches to look
-
-[The 'master' branch](https://github.com/netty/netty/tree/master) is where the development of the latest major version lives on.  The development of all other major versions takes place in each branch whose name is identical to its major version number.  For example, the development of 3.x and 4.x resides in [the branch '3'](https://github.com/netty/netty/tree/3) and [the branch '4'](https://github.com/netty/netty/tree/4) respectively.
+如果你发现切换到`4.0.27-Final`分支上，Common包的target目录下有编译报错，则`mvn clean compile`该jar包即可。
